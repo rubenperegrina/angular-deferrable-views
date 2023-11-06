@@ -11,4 +11,6 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
 })
 export class AppComponent {
   isCheckedDefer = signal(false);
+  userLogged = {name:'Rubén', role: 'admin'};
+  user = [{name: 'Rubén', id: '001'}, {name: 'Albert', id: '002'}]
 }

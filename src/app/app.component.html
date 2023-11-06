@@ -71,3 +71,34 @@
 @placeholder {
   <span>Placeholder</span>
 }
+
+<h1>@if @else</h1>
+
+@if (userLogged) {
+  Hi {{ userLogged.name }}
+} @else {
+  You need to log in first
+}
+
+<h1>@for</h1>
+
+@for( user of users; track user.id){
+  <option value="{{user.id}}">{{user.name}}</option>
+}
+
+<h1>@switch</h1>
+
+@switch (user.role) {
+  @case (admin) {
+      <span>You have admin role</span>
+    }
+  @case (user) {
+      <span>You have user role</span>
+    }
+  @case (super) {
+      <span>You have super role</span>
+    }
+  @default {
+  <span>You don't have a role yet</span>
+  }
+}
