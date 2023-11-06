@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Component, signal } from '@angular/core';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { NewsletterComponent } from './newsletter/newsletter.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  imports: [AboutComponent, ContactComponent, NewsletterComponent],
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'angular-deferrable-views';
+  isCheckedDefer = signal(false);
 }
